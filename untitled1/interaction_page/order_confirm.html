@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../Sources/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../Sources/bootstrap/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="../Sources/css/shopping_cart_style.css">
+    <script src="../Sources/js/jquery-2.2.4.min.js"></script>
+    <script src="../Sources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../Sources/js/simpleCart.js"></script>
+    <style>
+        a{
+            text-decoration: none;
+        }
+    </style>
+    <script>
+        var cart=simpleCart({
+            cartStyle:"table",
+            checkout: {
+                type: "SendForm" ,
+                url: "#",/*This place needs the script file to handle the from data*/
+                method: "POST",
+                extra_data: {
+                    sellorId:"",/*Modify when needed in the js */
+                    payment:"",/*Modify when needed in the js */
+                    address:""/*Modify when needed in the js */
+                }
+            },
+            cartColumns: [
+                {view:function (item,column) {
+                    return "<a href='#'><img class='img-polaroid' style='width: 100px;height: 120px;' src='"+ item.get('image')+"'></a>"
+                },
+                    attr:"image"},
+                { attr: "name" , label: "Product" } ,
+                { attr: "price" , label: "Price", view: 'currency' } ,
+                { attr: "quantity" , label: "Quantity" } ,
+                { attr: "size" , label: "Size" } ,
+                { attr: "total" , label: "SubTotal", view: 'currency' } ,
+                { view: "remove" , text: "<button class='btn btn-danger'>remove</button>" , label: false }
+            ]
+        });
+        /*Redefined the form info format:*/
+        cart.extra_data.address="Sichuan University";
+        cart.extra_data.payment="Cash and Delivery";
+        cart.extra_data.sellorId="Sellor 001";
+    </script>
+    <title>Order Confirm</title>
+</head>
+<body>
+<header>
+    <!--navigation bar-->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="Home.html" class="brand">Shop Mall</a>
+                <span class="pull-left">
+                        <img style=" margin-top: 9px;margin-right: 30px;"
+                             src="../Sources/img/glyphicons-2-leaf.png" title="HOME">
+                        </span>
+                <div class="nav-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="Home.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Clothes</a>
+                        </li>
+                        <li>
+                            <a href="#">Food</a>
+                        </li>
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">More<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Shoes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Bags</a>
+                                </li>
+                                <li>
+                                    <a href="#">Electronic</a>
+                                </li>
+                                <li class="divider">
+                                </li>
+                                <li class="nav-header">
+                                    Oversea Product
+                                </li>
+                                <li>
+                                    <a href="#">Oversea Clothes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Oversea Decoration</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li>
+                            <a href="#">User</a>
+                        </li>
+                        <li class="divider-vertical">
+                        </li>
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Menu<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="login.html">Sign In</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">Sign Up</a>
+                                </li>
+                                <li>
+                                    <a href="#">Log out</a>
+                                </li>
+                                <li class="divider">
+                                </li>
+                                <li>
+                                    <a href="#">Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <li class="pull-right">
+                        <img style=" margin-top: 10px;margin-right: 30px;cursor: pointer"
+                             src="../Sources/img/glyphicons-203-shopping-cart.png" title="shopping cart">
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--navigation bar-->
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="span12">
+                <!--Search bar-->
+                <div class="pull-right">
+                    <form class="form-search">
+                        <input class="input-large search-query" type="text" placeholder="Please type goods"/>
+                        <button type="submit" class="btn btn-inverse">
+                            <span class="icon-white icon-search"></span>
+                            Search
+                        </button>
+                    </form>
+                </div>
+                <!--Search bar-->
+            </div>
+        </div>
+
+    </div>
+    <div class="breadcrumbs">
+        <div class="container">
+            <ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
+                <li><a href="Home.html"><span aria-hidden="true"><img src="../Sources/img/glyphicons-21-home.png"></span><h4>HOME</h4></a></li>
+                <li class="active">/Order Check</li>
+            </ol>
+        </div>
+    </div>
+</header>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="container-fluid">
+                <div class="row-fluid">
+                    <div class="span8">
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div class="row-fluid">
+                                    <div class="span8">
+                                        <h4 style="margin-left: 50px">
+                                            Address:
+                                        </h4>
+                                        <address style="margin-left: 50px">
+                                            <strong>China(CHN)</strong>
+                                            <br />
+                                            Chengdu SiChuang
+                                            <br />
+                                            Sichuan University, CN 625100
+                                            <br />
+                                            <abbr title="Phone">Mobile Phone:</abbr>(+86) 158-203-880-63
+                                        </address>
+                                        <a id="modal-788177" href="#modal-container-788177" role="button" class="btn" data-toggle="modal" style="margin-left: 50px">Change Address</a>
+
+                                        <div id="modal-container-788177" class="modal hide fade" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-header">
+                                                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                                <h3 id="myModalLabel">
+                                                    New Address
+                                                </h3>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form class="form-horizontal">
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="Country"><span><img src="../Sources/img/glyphicons-4-user.png"></span></label>
+                                                        <div class="controls">
+                                                            <input required id="Country" name="country" type="text" placeholder="Country name" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="Province/State"><span><img src="../Sources/img/glyphicons-204-lock.png"></span></label>
+                                                        <div class="controls">
+                                                            <input required id="Province/State" name="province_state" type="text" placeholder="Province/State"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="Street"><span><img src="../Sources/img/glyphicons-353-nameplate.png"></span></label>
+                                                        <div class="controls">
+                                                            <input required id="Street" name="street" type="text" placeholder="Street name"/>
+                                                        </div>
+                                                    </div>
+                                                    <div class="control-group">
+                                                        <label class="control-label" for="phone"><span><img src="../Sources/img/glyphicons-164-iphone.png"></span></label>
+                                                        <div class="controls">
+                                                            <input required id="phone" name="phonenumber" type="text" placeholder="Mobile phone"/>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button class="btn btn-danger pull-left" data-dismiss="modal" aria-hidden="true">Cancel</button> <input type="submit" class="btn btn-primary" value="Confirm"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span4 text-center">
+                                        <h4>
+                                            Payment:
+                                        </h4>
+                                        <div class="radio">
+                                            <label><input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" /> Cash and Delivery</label>
+                                        </div>
+                                        <div class="radio">
+                                            <label><input type="radio" name="optionsRadios" id="optionsRadios2" value="option2" /> Paypel</label>
+                                        </div>
+                                        <div class="radio">
+                                            <label><input type="radio" name="optionsRadios" id="optionsRadios3" value="option2" /> Apple Pay</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <ul class="nav nav-list">
+                                <li class="divider " style="color: black"></li>
+                            </ul>
+                        </div>
+                        <div class="row-fluid">
+                            <div class="span12">
+                                <div class="simpleCart_items"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4">
+                        <div><h3>Order Information:</h3></div>
+                        <div class="simpleCart_total pull-right" style="margin-right: 100px"></div>
+                        <div><h5>Product:</h5></div>
+                        <p class="pull-right"style="margin-right: 100px">$10</p>
+                        <div><h5>Shippng:</h5></div>
+                        <p class="pull-right"style="margin-right: 100px">$10</p>
+                        <div><h5>discount:</h5></div>
+                        <br>
+                        <div><h4>Total:</h4></div>
+                        <div class="simpleCart_total text-center" style="font-size: large;"></div>
+                        <a href="javascript:;" class="simpeCart_checkout"><button class="btn btn-block btn-success text-center" style="margin-left: 20px;width: 70%">Confirm</button></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

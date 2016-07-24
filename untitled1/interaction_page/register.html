@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../Sources/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Sources/bootstrap/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="../Sources/css/login.css">
+    <script src="../Sources/js/jquery-2.2.4.min.js"></script>
+    <script src="../Sources/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../Sources/js/simplecart.min.js"></script>
+    <title>Register</title>
+</head>
+<body>
+<header>
+    <!--Main naviagtion bar-->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="Home.html" class="brand">Shop Mall</a>
+                <span class="pull-left">
+                        <img style=" margin-top: 9px;margin-right: 30px;"
+                             src="../Sources/img/glyphicons-2-leaf.png" title="HOME">
+                        </span>
+                <div class="nav-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="Home.html">Home</a>
+                        </li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li>
+                            <a href="#">User</a>
+                        </li>
+                        <li class="dividevertical">
+                        </li>
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Menu<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="login.html">Sign In</a>
+                                </li>
+                                <li>
+                                    <a href="register.html=">Sign Up</a>
+                                </li>
+                                <li>
+                                    <a href="#">Log out</a>
+                                </li>
+                                <li class="divider">
+                                </li>
+                                <li>
+                                    <a href="#">Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <li class="pull-right">
+                        <span class="simpleCart_total"></span>
+                        <img style=" margin-top: 10px;margin-right: 30px;cursor: pointer"
+                             src="../Sources/img/glyphicons-203-shopping-cart.png" title="shopping cart">
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--main navigation bar-->
+
+</header>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <!--login in info block-->
+            <div class="row-fluid">
+                <div class="span7">
+                    <!--ToDo-->
+                </div>
+                <div class="span5" style="margin-top: 10%">
+                    <h3 class="text-center" style="margin-bottom: 20px">Shopping Mall</h3>
+                    <form class="form-horizontal">
+                        <div class="control-group">
+                            <label class="control-label" for="inputEmail"><span><img src="../Sources/img/glyphicons-4-user.png"></span></label>
+                            <div class="controls">
+                                <input required id="inputEmail" name="username" type="text" placeholder="Email or username" />
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="inputPassword"><span><img src="../Sources/img/glyphicons-204-lock.png"></span></label>
+                            <div class="controls">
+                                <input required id="inputPassword" name="password" type="password" placeholder="Password"/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="fullName"><span><img src="../Sources/img/glyphicons-353-nameplate.png"></span></label>
+                            <div class="controls">
+                                <input required id="fullName" name="fullname" type="text" placeholder="Full name"/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <label class="control-label" for="phone"><span><img src="../Sources/img/glyphicons-164-iphone.png"></span></label>
+                            <div class="controls">
+                                <input required id="phone" name="phonenumber" type="text" placeholder="Mobile phone"/>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <div class="controls">
+                               <button class="btn btn-success" type="submit" style="margin-left: 150px">Register</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!--login in info block-->
+        </div>
+    </div>
+</div>
+</body>
+</html>

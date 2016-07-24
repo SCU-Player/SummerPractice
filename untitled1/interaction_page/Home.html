@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Mall</title>
+    <link rel="stylesheet" href="../Sources/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="../Sources/bootstrap/css/bootstrap-responsive.css">
+    <script src="../Sources/js/jquery-2.2.4.min.js"></script>
+    <script src="../Sources/bootstrap/js/bootstrap.js"></script>
+    <script src="../Sources/js/simplecart.min.js"></script>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="Home.html" class="brand">Shop Mall</a>
+                <span class="pull-left">
+                        <img style=" margin-top: 9px;margin-right: 30px;"
+                             src="../Sources/img/glyphicons-2-leaf.png" title="HOME">
+                        </span>
+                <div class="nav-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="Home.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Clothes</a>
+                        </li>
+                        <li>
+                            <a href="#">Food</a>
+                        </li>
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">More<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Shoes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Bags</a>
+                                </li>
+                                <li>
+                                    <a href="#">Electronic</a>
+                                </li>
+                                <li class="divider">
+                                </li>
+                                <li class="nav-header">
+                                    Oversea Product
+                                </li>
+                                <li>
+                                    <a href="#">Oversea Clothes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Oversea Decoration</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li>
+                            <a href="#">User</a>
+                        </li>
+                        <li class="divider-vertical">
+                        </li>
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Menu<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="login.html">Sign In</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">Sign Up</a>
+                                </li>
+                                <li>
+                                    <a href="#">Log out</a>
+                                </li>
+                                <li class="divider">
+                                </li>
+                                <li>
+                                    <a href="#">Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <li class="pull-right">
+                        <span class="simpleCart_total "></span>
+                        <a href="shopping_cart.html"><img style=" margin-top: 10px;margin-right: 30px;"
+                             src="../Sources/img/glyphicons-203-shopping-cart.png" title="shopping cart">
+                        </a>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--navigation block-->
+</header>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <!--navigation block-->
+            <!--Slide block-->
+            <div class="carousel slide" id="carousel-56572" style="border-top: 0px">
+                <ol class="carousel-indicators">
+                    <li class="active" data-slide-to="0" data-target="#carousel-56572">
+                    </li>
+                    <li data-slide-to="1" data-target="#carousel-56572">
+                    </li>
+                    <li data-slide-to="2" data-target="#carousel-56572">
+                    </li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="item active text-center">
+                        <div class="center-block">
+                            <img alt="" src="../Sources/img/1.jpg" />
+                        </div>
+                        <div class="carousel-caption">
+                            <h4>
+                                Shopping Mall
+                            </h4>
+                            <p>
+                                we will help you do the right thing that you hope for
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item text-center">
+                        <div class="center-block">
+                            <img alt="" src="../Sources/img/2.jpg" />
+                        </div>
+                        <div class="carousel-caption">
+                            <h4>
+                                Man suite
+                            </h4>
+                            <p>
+                                As we Told befer the all the stuff in the market is 50% off
+                                From now on, please don't worry about your wallet and try to buy
+                                every stuff you like.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="item text-center">
+                        <div class="center-block">
+                            <img alt="" src="../Sources/img/3.jpg" />
+                        </div>
+                        <div class="carousel-caption">
+                            <h4>
+                                Bags hot sell
+                            </h4>
+                            <p>
+                                Every moment in our life is the life of the beauty of the bags.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <a data-slide="prev" href="#carousel-56572" class="left carousel-control">‹</a>
+                <a data-slide="next" href="#carousel-56572" class="right carousel-control">›</a>
+            </div>
+            <!--slide block-->
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span2">
+            <div class="accordion" id="accordion-736079">
+                <div class="accordion-group">
+                    <div class="accordion-heading">
+                        <a class="accordion-toggle collapsed text-center" data-toggle="collapse" data-parent="#accordion-736079" href="#accordion-element-290146">
+                            <div class="center-block"><img src="../Sources/img/glyphicons-social-44-apple.png"></div>  Apple</a>
+                    </div>
+                    <div id="accordion-element-290146" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <a href="#" style="color: darkslategrey"> Apple Mac</a>
+                        </div>
+                        <div class="accordion-inner">
+                            <a href="#" style="color: darkslategrey"> Aplle Ipad</a>
+                        </div>
+                        <div class="accordion-inner">
+                            <a href="#" style="color: darkslategrey"> Aplle supplement</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-group">
+                    <div class="accordion-heading text-center">
+                        <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion-736079" href="#accordion-element-979111">
+                             <div class="center-block"><img src="../Sources/img/glyphicons-social-15-dribbble.png"></div>Jordan</a>
+                    </div>
+                    <div id="accordion-element-979111" class="accordion-body collapse">
+                        <div class="accordion-inner">
+                            <a href="#" style="color: darkslategrey"> Jordan Shoe</a>
+                        </div>
+                        <div class="accordion-inner">
+                            <a href="#" style="color: darkslategrey"> Jordan Clothes</a>
+                        </div>
+                        <div class="accordion-inner">
+                            <a href="#" style="color: darkslategrey"> Jordan Hat</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="span6">
+            <ul class="thumbnails">
+                <li class="span4">
+                    <div class="simpleCart_shelfItem thumbnail">
+                        <img class="item_image" alt="300x200" src="../Sources/img/12.jpg" />
+                        <div class="caption">
+                            <h3 class="item_name">
+                                Food
+                            </h3>
+                            <p class="item_price">
+                                $9.99
+                            </p>
+                            <p>
+                                Fashion. Cheap. And High rate of pice and function
+                            </p>
+                            <p>
+                                <a class="btn btn-primary item_add" href="javascript:;"><span class="icon-white icon-shopping-cart"></span>BUY</a> <a class="btn" href="#">SHARE</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="span4">
+                    <div class="simpleCart_shelfItem thumbnail">
+                        <img class="item_image" alt="300x200" src="../Sources/img/13.jpg" />
+                        <div class="caption">
+                            <h3 class="item_name">
+                                Clothes
+                            </h3>
+                            <p class="item_price">
+                                $9.99
+                            </p>
+                            <p>
+                                Fashion. Cheap. And High rate of pice and function
+                            </p>
+                            <p>
+                                <a class="btn btn-primary item_add" href="#"><span class="icon-white icon-shopping-cart"></span>BUY</a> <a class="btn" href="#">SHARE</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li class="span4">
+                    <div class="simpleCart_shelfItem thumbnail">
+                        <img class="item_image" alt="300x200" src="../Sources/img/14.jpg" />
+                        <div class="caption">
+                            <h3 class="item_name">
+                                Bags
+                            </h3>
+                            <p class="item_price">
+                                $9.99
+                            </p>
+                            <p>
+                               Fashion. Cheap. And High rate of pice and function
+                            </p>
+                            <p>
+                                <a class="btn btn-primary item_add" href="#"><span class="icon-white icon-shopping-cart"></span>BUY</a> <a class="btn" href="#">SHARE</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="controls-row">
+                <img class="span2" alt="140x140" src="../Sources/img/pr.jpg" />
+                <article class="span10"><strong>Good Jeans</strong>. This is a good jeans for Mr right,and I hope to think that you will
+                purchase the thing that suits you.So be pleaseful to pay the goods home.^_^</article>
+            </div>
+            <div>
+                <ul class="nav nav-list">
+                    <li class="divider "></li>
+                </ul>
+            </div>
+            <div class="controls-row">
+                <img class="span2" alt="140x140" src="../Sources/img/pr1.jpg" />
+                <article class="span10"><strong>Good Stress.</strong> Only this stress can make you look grogeous</article>
+            </div>
+        </div>
+        <div class="span4">
+            <form class="form-search">
+                <input class="input-large search-query" type="text" placeholder="Please type goods"/>
+                <button type="submit" class="btn btn-primary">
+                    <span class="icon-white icon-search"></span>
+                    Search
+                </button>
+            </form>
+            <div class="hero-unit" contenteditable="true" style="background-color: white">
+                <h1>Hello, Guys!</h1>
+                <p>Now in the next 7 Days. In the Shop Mall, Yes just in Shop Mall. There will be 50% off carnival for every one! </p>
+                <p><a class="btn btn-primary btn-large" href="#">Learn more »</a></p>
+            </div>
+
+        </div>
+    </div>
+    <div>
+        <ul class="nav nav-list">
+            <li class="divider " style="color: black"></li>
+        </ul>
+    </div>
+    <div class="row-fluid">
+        <div class="span12">
+            <address style="text-align: center;">
+                <strong>Shop Mall, Inc.</strong>
+                <br /> 001 ,part2,ChuanDa Road<br /> Sichuan Chengdu, CN 625100<br />
+                <abbr title="Phone">P:</abbr>
+                (123) 456-7890
+            </address>
+            <p style="text-align: center;">
+                Copyright by: Jiayong Mo
+            </p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

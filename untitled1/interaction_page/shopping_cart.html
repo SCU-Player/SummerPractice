@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>shopping cart</title>
+    <link rel="stylesheet" href="../Sources/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../Sources/bootstrap/css/bootstrap-responsive.min.css">
+    <link rel="stylesheet" href="../Sources/css/shopping_cart_style.css">
+    <script src="../Sources/js/jquery-2.2.4.min.js"></script>
+    <script src="../Sources/js/simpleCart.js"></script>
+    <script src="../Sources/bootstrap/js/bootstrap.min.js"></script>
+    <script>
+        simpleCart({
+            cartStyle:"table",
+            checkout: {
+                type: "PayPal" ,
+                email: "mojiayong@outlook.com"
+            },
+            cartColumns: [
+                {view:function (item,column) {
+                    return "<a href='#'><img class='img-polaroid' style='width: 100px;height: 120px;' src='"+ item.get('image')+"'></a>"
+                },
+                attr:"image"},
+                { attr: "name" , label: "Product" } ,
+                { attr: "price" , label: "Price", view: 'currency' } ,
+                { view: "decrement" , label: false , text: "<button class='btn btn-inverse'>-</button>" } ,
+                { attr: "quantity" , label: "Quantity" } ,
+                { view: "increment" , label: false , text: "<button class='btn btn-primary'>+</button>" } ,
+                { attr: "size" , label: "Size" } ,
+                { attr: "total" , label: "SubTotal", view: 'currency' } ,
+                { view: "remove" , text: "<button class='btn btn-danger'>remove</button>" , label: false }
+            ]
+        });
+    </script>
+</head>
+<body>
+<header>
+    <!--navigation bar-->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a data-target=".navbar-responsive-collapse" data-toggle="collapse" class="btn btn-navbar"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></a> <a href="Home.html" class="brand">Shop Mall</a>
+                <span class="pull-left">
+                        <img style=" margin-top: 9px;margin-right: 30px;"
+                             src="../Sources/img/glyphicons-2-leaf.png" title="HOME">
+                        </span>
+                <div class="nav-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav">
+                        <li class="active">
+                            <a href="Home.html">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">Clothes</a>
+                        </li>
+                        <li>
+                            <a href="#">Food</a>
+                        </li>
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">More<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="#">Shoes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Bags</a>
+                                </li>
+                                <li>
+                                    <a href="#">Electronic</a>
+                                </li>
+                                <li class="divider">
+                                </li>
+                                <li class="nav-header">
+                                    Oversea Product
+                                </li>
+                                <li>
+                                    <a href="#">Oversea Clothes</a>
+                                </li>
+                                <li>
+                                    <a href="#">Oversea Decoration</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav pull-right">
+                        <li>
+                            <a href="#">User</a>
+                        </li>
+                        <li class="divider-vertical">
+                        </li>
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" href="#">Menu<strong class="caret"></strong></a>
+                            <ul class="dropdown-menu">
+                                <li>
+                                    <a href="login.html">Sign In</a>
+                                </li>
+                                <li>
+                                    <a href="register.html">Sign Up</a>
+                                </li>
+                                <li>
+                                    <a href="#">Log out</a>
+                                </li>
+                                <li class="divider">
+                                </li>
+                                <li>
+                                    <a href="#">Help</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <li class="pull-right">
+                        <img style=" margin-top: 10px;margin-right: 30px;cursor: pointer"
+                             src="../Sources/img/glyphicons-203-shopping-cart.png" title="shopping cart">
+                    </li>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--navigation bar-->
+
+</header>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <!--Search bar-->
+            <div class="pull-right">
+                <form class="form-search">
+                    <input class="input-large search-query" type="text" placeholder="Please type goods"/>
+                    <button type="submit" class="btn btn-inverse">
+                        <span class="icon-white icon-search"></span>
+                        Search
+                    </button>
+                </form>
+            </div>
+            <!--Search bar-->
+        </div>
+    </div>
+
+</div>
+<div class="breadcrumbs">
+    <div class="container">
+        <ol class="breadcrumb breadcrumb1 animated wow slideInLeft animated" data-wow-delay=".5s" style="visibility: visible; animation-delay: 0.5s; animation-name: slideInLeft;">
+            <li><a href="Home.html"><span aria-hidden="true"><img src="../Sources/img/glyphicons-21-home.png"></span><h4>HOME</h4></a></li>
+            <li class="active">/Checkout</li>
+        </ol>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span12">
+            <!--For test cart-->
+        <!--<script>-->
+            <!--simpleCart.add({name:"hello",price:100,size:"L",image:"../Sources/img/pr.jpg"});-->
+            <!--simpleCart.add({name:"hello2",price:200,size:"M",image:"../Sources/img/pr1.jpg"});-->
+            <!--simpleCart.add({name:"hello3",price:300,size:"S",image:"../Sources/img/pr1.jpg"});-->
+            <!--simpleCart.add({name:"hello4",price:100,size:"M",image:"../Sources/img/pr.jpg"});-->
+        <!--</script>-->
+            <!--For test cart-->
+            <div class="table-striped ">
+                <div class="simpleCart_items"></div>
+            </div>
+            <div>
+                <table class="table">
+                    <tr>
+                        <td class="pull-right" style="margin-top: 20px"><div class="simpleCart_grandTotal"></div></td>
+                        <td class="pull-right"><h3>Total</h3></td>
+                    </tr>
+                    <tr class="pull-right">
+                        <td><a href="#"><button class="btn btn-success">Confirm Order</button></a></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row-fluid">
+    <div class="span12">
+        <address style="text-align: center;">
+            <strong>Shop Mall, Inc.</strong>
+            <br /> 001 ,part2,ChuanDa Road<br /> Sichuan Chengdu, CN 625100<br />
+            <abbr title="Phone">P:</abbr>
+            (123) 456-7890
+        </address>
+        <p style="text-align: center;">
+            Copyright by: Jiayong Mo
+        </p>
+    </div>
+</div>
+</body>
+</html>
